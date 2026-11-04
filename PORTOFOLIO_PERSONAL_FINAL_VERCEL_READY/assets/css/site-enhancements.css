@@ -1,0 +1,52 @@
+
+/* Portfolio refinement layer — preserves original page content and components */
+:root{--portfolio-navy:#071d43;--portfolio-blue:#1268e8;--portfolio-cyan:#54d9f4;--portfolio-ink:#10233f;--portfolio-muted:#64748b;--portfolio-surface:#f5f8fd;--portfolio-border:#e3eaf4}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:#f7f9fd;color:var(--portfolio-ink);font-family:"DM Sans",Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.edgina-page{overflow-x:clip}
+.edgina-hero{background-color:var(--portfolio-navy)!important;background-image:radial-gradient(ellipse at 80% 12%,rgba(84,217,244,.22),transparent 30%),radial-gradient(ellipse at 8% 85%,rgba(18,104,232,.28),transparent 34%),linear-gradient(125deg,#061a3b 0%,#073c8b 52%,#087fca 100%)!important}
+.edgina-navbar{background:rgba(5,24,57,.72)!important;border-bottom:1px solid rgba(255,255,255,.13)!important;backdrop-filter:blur(18px)!important}
+.edgina-logo-mark{box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.edgina-nav a,.edgina-mobile-menu a{transition:background .22s ease,color .22s ease,transform .22s ease}
+.edgina-nav a:hover{transform:translateY(-2px)}
+.edgina-hero-title,.edgina-section-title,.edgina-section-heading{letter-spacing:-.035em}
+.edgina-description,.edgina-section-description{max-width:720px}
+.edgina-container,.edgina-about-container{width:min(1160px,90%);margin-inline:auto}
+.edgina-about-section{padding-block:clamp(64px,8vw,112px)}
+.edgina-skill-card,.edgina-achievement-card,.edgina-seminar-card,.edgina-education-card,.edgina-experience-card,.edgina-project-card,.edgina-news-card,.edgina-social-card,.edgina-publication-card{border:1px solid rgba(18,67,125,.09)!important;border-radius:20px!important;box-shadow:0 12px 34px rgba(10,39,82,.07)!important;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.edgina-skill-card:hover,.edgina-achievement-card:hover,.edgina-seminar-card:hover,.edgina-education-card:hover,.edgina-experience-card:hover,.edgina-project-card:hover,.edgina-news-card:hover,.edgina-social-card:hover,.edgina-publication-card:hover{transform:translateY(-5px);box-shadow:0 20px 46px rgba(10,39,82,.12)!important;border-color:rgba(18,104,232,.22)!important}
+.edgina-project-image,.edgina-news-image,.edgina-education-image{overflow:hidden}
+.edgina-project-image img,.edgina-news-image img,.edgina-education-image img{transition:transform .45s ease}
+.edgina-project-card:hover img,.edgina-news-card:hover img,.edgina-education-card:hover img{transform:scale(1.035)}
+.edgina-footer{background:#061a3b!important;color:#dbe8fb}
+.edgina-footer a{transition:color .2s ease}
+.edgina-footer a:hover{color:#72e4ff!important}
+.edgina-whatsapp{filter:drop-shadow(0 8px 18px rgba(0,0,0,.2))}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #54d9f4!important;outline-offset:3px!important}
+img{max-width:100%;height:auto}
+@media(max-width:900px){
+ .edgina-grid{grid-template-columns:minmax(0,1fr)!important;gap:34px!important}
+ .edgina-hero-container{width:min(92%,720px)!important;padding-top:112px!important;padding-bottom:64px}
+ .edgina-visual{min-height:420px!important}
+ .edgina-visual-shape{width:min(330px,78vw)!important;height:min(330px,78vw)!important}
+ .edgina-hero{min-height:auto!important}
+}
+@media(max-width:640px){
+ .edgina-navbar{padding:14px 5%!important}
+ .edgina-logo{font-size:17px!important}
+ .edgina-hero-title{font-size:clamp(38px,11vw,58px)!important;letter-spacing:-1.8px!important;line-height:1.04!important}
+ .edgina-description{font-size:15px!important;line-height:1.75!important}
+ .edgina-hero-container{padding-top:104px!important}
+ .edgina-meta{gap:8px!important}
+ .edgina-meta-pill{font-size:12px!important;padding:9px 12px!important}
+ .edgina-container,.edgina-about-container{width:90%!important}
+ .edgina-about-section{padding-block:58px!important}
+ .edgina-visual{min-height:340px!important}
+ .edgina-visual-shape{width:min(270px,72vw)!important;height:min(270px,72vw)!important}
+ .edgina-visual-icon-box{width:126px!important;height:126px!important}
+ .edgina-visual-icon-box svg,.edgina-visual-icon-box i{width:60px!important;height:60px!important}
+ .edgina-footer{padding-inline:5%!important}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
