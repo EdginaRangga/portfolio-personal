@@ -86,3 +86,13 @@ Formulir pada halaman beranda menggunakan layanan pihak ketiga FormSubmit dan me
 - Memastikan konfigurasi deployment statis tersedia.
 
 Pengujian visual lintas perangkat dan verifikasi langsung pada domain Vercel tetap perlu dilakukan setelah deployment karena tidak ada akses ke akun Vercel pengguna pada sesi ini.
+
+
+## Revisi header, footer, dan gambar
+
+- Header navigasi bersama ditambahkan pada keenam halaman: Beranda, Tentang Saya, Pendidikan, Pengalaman, Proyek, dan Kontak.
+- Menu desktop dan menu hamburger mobile menggunakan tautan halaman yang sama.
+- Navigasi halaman aktif ditandai otomatis, termasuk navigasi footer.
+- Pemanggilan gambar eksternal menggunakan `referrerpolicy="no-referrer"` untuk mengurangi kegagalan akibat pemeriksaan Referer/hotlink.
+- Jika server sumber tetap menolak gambar atau URL sudah tidak tersedia, gambar tersebut tidak dapat dipulihkan hanya dari HTML. Simpan foto asli di folder `assets/images/`, lalu ubah `src` gambar terkait menjadi path lokal agar tidak bergantung pada hosting eksternal.
+- JavaScript menampilkan fallback berlabel ketika gambar eksternal gagal dimuat; fallback ini bukan pengganti foto asli.
